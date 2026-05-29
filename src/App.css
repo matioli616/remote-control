@@ -1,0 +1,88 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #0a0a0a;
+  color: #e0e0e0;
+  font-family: 'Consolas', 'Monaco', monospace;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  align-items: center;
+  background: #111;
+  border-bottom: 1px solid #222;
+  display: flex;
+  flex-shrink: 0;
+  height: 46px;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.logo {
+  color: #00ff88;
+  font-size: 14px;
+  font-weight: bold;
+  min-width: 140px;
+}
+
+.tabs {
+  display: flex;
+  gap: 2px;
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  border-radius: 4px;
+  color: #666;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  padding: 6px 18px;
+  transition: all 0.1s;
+}
+
+.tabs button:hover { color: #e0e0e0; background: #1a1a1a; }
+.tabs button.active { color: #00ff88; background: #0a1a10; }
+
+.header-right {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  min-width: 140px;
+  justify-content: flex-end;
+}
+
+.pc-status { font-size: 12px; }
+.pc-status.online { color: #00ff88; }
+.pc-status.offline { color: #444; }
+
+.btn-logout {
+  background: none;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  color: #666;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12px;
+  padding: 3px 10px;
+}
+
+.btn-logout:hover { border-color: #444; color: #aaa; }
+
+.main { flex: 1; overflow: hidden; }
+
+.loading {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  color: #444;
+}
